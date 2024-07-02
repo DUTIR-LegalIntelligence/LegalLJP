@@ -19,13 +19,13 @@ Article: [114, 61]
 
 Annotations:
 
- [{'criminals': '杜某甲',
+--'criminals': '杜某甲',
  
-   'annotation': [{'charge': '放火', 'penalty': '有期徒刑', 'imprisonment': 36}],
+--'annotation': [{'charge': '放火', 'penalty': '有期徒刑', 'imprisonment': 36}],
    
-   'penalty': '有期徒刑',
+--'penalty': '有期徒刑',
    
-   'imprisonment': 36}]
+--'imprisonment': 36
 
 The specific meanings of the annotations are explained as follows:
 
