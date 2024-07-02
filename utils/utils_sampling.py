@@ -151,17 +151,9 @@ def representation(args,model,dataset,):
         attention_mask = attention_mask.to(model.device)
         input_mask = input_mask.to(model.device)
 
-        if args.model_type == "qwen":
-            #outputs = model.forward(input_ids=input_ids,attention_mask=attention_mask,output_hidden_states=True)
-            #representations = outputs["hidden_states"][-1].mean(dim=1)
-            outputs = model.encode(text)
-            representations = torch.tensor(outputs)
 
-        else:
-            outputs = model.encode(text)
-            #representations = outputs["hidden_states"][-1].mean(dim=1)
-            representations = torch.tensor(outputs)
-
+        outputs = model.encode(text)
+        representations = torch.tensor(outputs)
 
         reps[i * args.batch_size: min((i + 1) * args.batch_size, len(dataset))] = representations.detach().cpu()
         indices[i * args.batch_size: min((i + 1) * args.batch_size, len(dataset))] = index[:, None]
@@ -189,12 +181,11 @@ def cluster(args, reps, indices, charges, classes2id, ncentroids=11000):
     
     cluster_centers = kmeans.centroids 
     
-        #obj = kmeans.obj #目标函数，kmeans 中为总的平方差
-        #iteration_stats = kmeans.iteration_stats #聚类中的统计信息
-        #print(cluster_centers.shape)
+    #obj = kmeans.obj #目标函数，kmeans 中为总的平方差
+    #iteration_stats = kmeans.iteration_stats #聚类中的统计信息
 
     reps_dataset = RepsDataset(reps,indices,charges,classes2id)
-    #reps_dataloader = DataLoader(reps_dataset, batch_size=args.batch_size, shuffle=False)
+
 
     return reps_dataset, torch.tensor(cluster_centers)
 
