@@ -2,7 +2,7 @@
 StageLJP: A Multi-Stage Dataset for Legal Judgment Prediction
 We introduce a multi-stage Chinese legal judgment prediction dataset. It encompasses approximately one million documents and includes various types of labels such as court opinions, relevant laws, charges, and prison term.
 
-## Processing of Original Documents
+## Dataset Structure
 We processed the original text into the following structured representation.
 
 Defendant:'被告人杜某甲，性别：××，××族，学生。2014年3月21日因涉嫌犯放火罪被遵化市公安局刑事拘留，同年4月2日经遵化市公安局决定取保候审。2014年10月28日经本院决定取保候审。'
@@ -52,3 +52,5 @@ Annotations: Structured representation of the judgment result，where：
 --annotation: Penalty based on the charge, including —— charge: Alleged crime，penalty: Penalty，imprisonment: Imprisonment term
         
 A single defendant may be accused of multiple charges, so the annotation may include multiple penalties.
+
+## Processing of Original Corpus
