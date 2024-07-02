@@ -27,3 +27,26 @@ Annotations:
    
    'imprisonment': 36}]
 
+The specific meanings of the annotations are explained as follows:
+
+Defendant: Information related to the defendant
+
+Procuratorate: Facts of the accusation
+
+Defence: Statements and arguments of the defendant and defense attorney
+
+Fact: Facts recognized by the court after review, including evidence descriptions and witness testimonies
+
+Conclusion: Court's opinion. The court's opinion on the above paragraphs, usually serving as the basis for the judgment
+
+Article: Articles involved in the judgment result
+
+Annotations: Structured representation of the judgment result,
+    criminals: Alias for the defendant's name
+    penalty: Decided penalty
+    imprisonment: Decided imprisonment term (in months)
+    annotation: Penalty based on the charge, including:
+        charge: Alleged crime
+        penalty: Penalty
+        imprisonment: Imprisonment term
+A single defendant may be accused of multiple charges, so the annotation may include multiple penalties.
