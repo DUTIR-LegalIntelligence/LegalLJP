@@ -54,3 +54,9 @@ Annotations: Structured representation of the judgment result，where：
 A single defendant may be accused of multiple charges, so the annotation may include multiple penalties.
 
 ## Processing of Original Corpus
+
+prompt.py: Convert Corpus to Fixed QA Structure (To facilitate training, the question-answer structure follows the [Firefly](https://github.com/yangjianxin1/Firefly) )
+
+
+
+
