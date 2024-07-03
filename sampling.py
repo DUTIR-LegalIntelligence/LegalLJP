@@ -13,22 +13,22 @@ def get_evaluate_parser():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--batch_size', default=2, type=int)
-    parser.add_argument('--max_seq_length', default=1024, type=int)
+    parser.add_argument('--max_seq_length', default=512, type=int)
 
     parser.add_argument('--model_path', type=str)
     parser.add_argument('--model_type', default='bert', type=str)  # bert
     parser.add_argument('--device', default='cuda', type=str)
 
-    parser.add_argument('--quantile', default=0.9, type=float)
+    parser.add_argument('--quantile', default=0.1, type=float)
     parser.add_argument('--use_representation', default=False, type=bool)
 
-    parser.add_argument('--corpus_path', default='/home/sda/zhangyuanyu/workspace/Judgment/corpus/train.jsonl',
+    parser.add_argument('--corpus_path', default='./train.jsonl',
                         type=str)
-    parser.add_argument('--pic_path', default='/home/sda/zhangyuanyu/workspace/Judgment/pic',
+    parser.add_argument('--pic_path', default='./pic',
                         type=str)
-    parser.add_argument('--log_path', default='/home/sda/zhangyuanyu/workspace/Judgment/log',
+    parser.add_argument('--log_path', default='./log',
                         type=str)
-    parser.add_argument('--save_path', default='/home/sda/zhangyuanyu/workspace/Judgment/data',
+    parser.add_argument('--save_path', default='./data',
                         type=str)
     parser.add_argument('--difficulty', default='easy', type=str, choices=['easy', 'hard'])
     parser.add_argument('--ncentroids', default=11000, type=int)
