@@ -55,7 +55,11 @@ A single defendant may be accused of multiple charges, so the annotation may inc
 
 ## Processing of Original Corpus
 
-prompt.py: Convert Corpus to Fixed QA Structure (To facilitate training, the question-answer structure follows the [Firefly](https://github.com/yangjianxin1/Firefly) )
+prompt.py: Convert Corpus to Fixed QA Structure (To facilitate training, the question-answer structure follows the [Firefly](https://github.com/yangjianxin1/Firefly))
+
+segment.py: Random sampling of training and testing sets from the raw data.
+
+sampling.py: Balancing the training set. To retain as many samples as possible, we set a minimum quantity threshold for each crime and retained 90% of the samples. The number of retained samples can be adjusted via the "--quantile" parameter.
 
 
 
